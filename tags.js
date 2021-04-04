@@ -1,22 +1,25 @@
 var i = 0;
 $(document).ready(function(){
     $("#submit_number").click(function(){
-      //console.log("click submit", i++);
-
         var data_number = $("#number").val();
-        console.log(data_number);
-        $("#number").val('');
+        if(data_number == ''){
+            console.log("Data : null")
+        }else{
+            console.log(data_number);
+            $("#number").val('');
+    
+            $.post("./api/post_number.php",
+            {
+                number: data_number,
+                price: "20",
+                type: "บน"
+            },function(){
+              //alert("number: " + data + "\n price: " + price + "\n type:" + type);
+            });
+    
+            $("#list_number").load("./list_number.php");
+        }
 
-        $.post("./api/post_number.php",
-        {
-            number: data_number,
-            price: "20",
-            type: "บน"
-        },
-        function(data,status){
-          //alert("number: " + data + "\n price: " + price + "\n type:" + type);
-        });
-      
     });
 });
 
