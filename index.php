@@ -25,7 +25,6 @@
             <div class="col-sm-4">
                 <h3>Result</h3>
                 <div id="list_number">
-
                 </div>
             </div>
 
@@ -44,6 +43,12 @@
             </div>
 
             <div class="col-sm-4">
+                <h3>manual only : def = ล่าง</h3>
+                <h3>กด F1 = type:ล่าง</h3>
+                <h3>กด F2 = type:บน</h3>
+
+                <h3><p id="type"> ประเภท : ล่าง</p></h3>
+
             </div>
 
         </div>

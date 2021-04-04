@@ -1,28 +1,24 @@
 var i = 0;
+var type = "ล่าง";
+
+
+
 $(document).ready(function(){
-    // $("#submit_number").click(function(){
-    //     var data_number = $("#number").val();
-    //     if(data_number == ''){
-    //         console.log("Data : null")
-    //     }else{
-    //         console.log(data_number);
-    //         $("#number").val('');
-    
-    //         $.post("./api/post_number.php",
-    //         {
-    //             number: data_number,
-    //             price: "20",
-    //             type: "บน"
-    //         },function(){
-    //           //alert("number: " + data + "\n price: " + price + "\n type:" + type);
-    //         });
-    //     }
-    //     $("#list_number").load("./list_number.php");
-    // });
-    
+
+    var xTriggered = 0;
+    $( "#number" ).keydown(function( event ) {
+      if ( event.which == 111 ) {
+       event.preventDefault();
+       console.log("Change Type");
+       alert("<h1>ประเภท:ล้าง</h1>");
+      }
+    });
+
+
     $("#number").on( "keydown", function(event) {
+        data_number = $("#number").val();
+        
         if(event.which == 13){
-            var data_number = $("#number").val();
             if(data_number == ''){
                 console.log("Data : null")
             }else{
