@@ -3,7 +3,7 @@
 
 <head>
     <title>number_x</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <script src="./jquery/jquery.min.js"></script>
     <script src="./bootstrap/bootstrap.min.js"></script>
 </head>
