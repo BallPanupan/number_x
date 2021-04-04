@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="./jquery/jquery.min.js"></script>
     <script src="./bootstrap/bootstrap.min.js"></script>
+
+    <script src="tags.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -50,12 +53,13 @@
             <div class="col-sm-4">
                 <h3>Input number</h3>
                 
-                <form method="post" action="./api/post_number.php">
-                    <input type="text" name="number">
+                <form method="post" action="javascript:void(0)">
+                    <input type="text" name="number" id="number">
                     <input type="hidden" name="price" value="0">
                     <input type="hidden" name="type" value="บน">
 
-                    <input type="submit">
+                    <!-- <input type="submit" id="submit_number"> -->
+                    <button id="submit_number">Submit</button>
                 </form>
 
             </div>
