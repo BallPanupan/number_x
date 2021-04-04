@@ -14,25 +14,7 @@
 
 <body>
 
-    <div class="jumbotron text-center">
-        <h1>number_x</h1>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-            </div>
-
-            <div class="col-sm-4">
-                <h3>Input number</h3>
-                <input type="text">
-            </div>
-
-            <div class="col-sm-4">
-            </div>
-
-        </div>
-    </div>
 
 </body>
 
