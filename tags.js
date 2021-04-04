@@ -7,6 +7,15 @@ $(document).ready(function(){
         console.log(data_number);
         $("#number").val('');
 
+        $.post("./api/post_number.php",
+        {
+            number: data_number,
+            price: "20",
+            type: "บน"
+        },
+        function(data,status){
+          //alert("number: " + data + "\n price: " + price + "\n type:" + type);
+        });
       
     });
 });
