@@ -1,6 +1,6 @@
 <?php include("sql_connection.php"); ?>
 <?php
-    $sql_list_all = "SELECT * FROM `number`";
+    $sql_list_all = "SELECT * FROM `number` order by ID DESC";
     $result_list_all = $conn->query($sql_list_all);
 ?>
 
