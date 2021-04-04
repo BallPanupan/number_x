@@ -33,7 +33,7 @@
                 <h3>Input number</h3>
                 
                 <form method="post" action="javascript:void(0)">
-                    <input type="text" name="number" id="number" autocomplete="off">
+                    <input type="text" name="number" id="number" autocomplete="off" autofocus>
                     <input type="hidden" name="price" value="0">
                     <input type="hidden" name="type" value="บน">
 
