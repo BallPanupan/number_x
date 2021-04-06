@@ -1,5 +1,6 @@
 var i = 0;
 var type = "ล่าง";
+var price ="";
 
 $(document).ready(function(){
     $("#alert_type").hide();
@@ -38,11 +39,35 @@ $(document).ready(function(){
             }else{
                 console.log(data_number);
                 $("#number").val('');
-        
+
+                //search [*] for Price
+                var search_star = data_number.search(/[*]/);
+
+                    console.log("digit * = ", search_star);
+
+                //check ตัวรูด
+                if(search_star==1){
+                    price = data_number.substring(search_star+1, data_number.length);
+                    console.log(data_number," =  รูดหน้า", data_number.substring(search_star,-1), "ตัว", price);
+                }
+                //รูดหลัง
+                if(search_star==0){
+                    price = data_number.substring(search_star+2, data_number.length);
+                    console.log(data_number," =  รูดหลัง", data_number.substring(search_star+1,2), "ตัว", price);
+                }
+
+                //ตัวกลับ
+                if(search_star==2){
+                    price = data_number.substring(search_star+1, data_number.length);
+                    var number_conv = data_number.substring(0, 2);
+                    console.log("ตัวกลับ",number_conv, "ตัว", price);
+
+                }
+
                 $.post("./api/post_number.php",
                 {
                     number: data_number,
-                    price: "20",
+                    price: "",
                     type: type,
                 },function(){
                   //alert("number: " + data + "\n price: " + price + "\n type:" + type);

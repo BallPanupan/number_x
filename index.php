@@ -10,7 +10,7 @@
     <!-- <script src="./bootstrap/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="tags.js"></script>
+    <script src="./tags.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -41,6 +41,11 @@
             </div>
 
             <div class="col-sm-4">
+
+            <table style="width:100%">
+            <tr>
+                <th><span class="badge badge-primary"><h1 id="type">ล่าง</h1></span></th>
+                <th>
                 <h3>Input number</h3>
 
                 <form method="post" action="javascript:void(0)">
@@ -51,11 +56,16 @@
                     <!-- <input type="submit" id="submit_number"> -->
                     <button id="submit_number">Submit</button>
                 </form>
+                </th> 
+            </tr>
+            </table>
+
+
 
             </div>
 
             <div class="col-sm-4">
-                <span class="badge badge-primary"><h1 id="type">ล่าง</h1></span>
+                
                 
                 
 
@@ -68,6 +78,8 @@
                 <h3>manual only : def = ล่าง</h3>
                 <h3>กด / = type:ล่าง</h3>
                 <h3>กด / = type:บน</h3>
+                <h3>9*300 = ลูดหน้า 9 ตัว 300</h3>
+                <h3>*920 = ลูดหลัง 9 ตัว 20</h3>
 
             </div>
 
