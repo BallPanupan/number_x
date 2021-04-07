@@ -1,6 +1,7 @@
 var i = 0;
 var type = "ล่าง";
 var price ="";
+var star = "*";
 
 $(document).ready(function(){
     $("#alert_type").hide();
@@ -45,24 +46,31 @@ $(document).ready(function(){
 
                     console.log("digit * = ", search_star);
 
-                //check ตัวรูด
-                if(search_star==1){
-                    price = data_number.substring(search_star+1, data_number.length);
-                    console.log(data_number," =  รูดหน้า", data_number.substring(search_star,-1), "ตัว", price);
+                //รูดหน้าหลังเลขคู่
+                if((data_number[0] == star[0]) & (data_number[1] == star[0])){
+                    console.log('รูดหน้าหลังเลขคู่');
+                }else{
+                    //check ตัวรูด
+                    if(search_star==1){
+                        price = data_number.substring(search_star+1, data_number.length);
+                        console.log(data_number," =  รูดหน้า", data_number.substring(search_star,-1), "ตัว", price);
+                    }
+                    //รูดหลัง
+                    if(search_star==0){
+                        price = data_number.substring(search_star+2, data_number.length);
+                        console.log(data_number," =  รูดหลัง", data_number.substring(search_star+1,2), "ตัว", price);
+                    }
                 }
-                //รูดหลัง
-                if(search_star==0){
-                    price = data_number.substring(search_star+2, data_number.length);
-                    console.log(data_number," =  รูดหลัง", data_number.substring(search_star+1,2), "ตัว", price);
-                }
+
+
 
                 //ตัวกลับ
                 if(search_star==2){
                     price = data_number.substring(search_star+1, data_number.length);
                     var number_conv = data_number.substring(0, 2);
                     console.log("ตัวกลับ",number_conv, "ตัว", price);
-
                 }
+
 
                 $.post("./api/post_number.php",
                 {
