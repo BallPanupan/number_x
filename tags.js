@@ -38,13 +38,11 @@ $(document).ready(function(){
             if(data_number == ''){
                 console.log("Data : null")
             }else{
-                console.log(data_number);
+                console.log("input ", data_number);
                 $("#number").val('');
 
                 //search [*] for Price
                 var search_star = data_number.search(/[*]/);
-
-                    console.log("digit * = ", search_star);
 
                 //รูดหน้าหลังเลขคู่
                 if((data_number[0] == star[0]) & (data_number[1] == star[0])){
@@ -62,8 +60,6 @@ $(document).ready(function(){
                     }
                 }
 
-
-
                 //ตัวกลับ
                 if(search_star==2){
                     price = data_number.substring(search_star+1, data_number.length);
@@ -71,6 +67,30 @@ $(document).ready(function(){
                     console.log("ตัวกลับ",number_conv, "ตัว", price);
                 }
 
+                //ตัวกลับ 2 ราคา
+                //count * 
+                var split_data_number = data_number.split("*").length -1;
+                if(split_data_number == 2){
+                    if(data_number[2]== star[0]){
+                        console.log("have 2 '*' and string[3] =='*'");
+
+                        var star_start_End =[];
+
+                        for (let i = 0; i < data_number.length; i++) {
+                            if(data_number[i] == "*"){
+                                star_start_End.push(i);
+                            }
+                        }
+                        console.log("star_start_End :",star_start_End);
+                        var price1 = data_number.substring(3, star_start_End[1]);
+                        var price2 = data_number.substring(star_start_End[1]+1, data_number.length);
+                        console.log("price1 : ", price1);
+                        console.log("price2 : ", price2);
+
+                    }
+                }
+
+                
 
                 $.post("./api/post_number.php",
                 {
