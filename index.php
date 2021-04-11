@@ -10,7 +10,7 @@
     <!-- <script src="./bootstrap/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="tags.js"></script>
+    <script src="tags_number_x.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -84,6 +84,10 @@
                 <h3>42*100..*5000 = 42:10 บาม | 24:5 บาท</h3>
                 <h3>42*10*10 = 42:10 บาม | 24:10 บาท</h3>
                 <h3>42*10</h3>
+                <br/>
+                ทั้ง บน และ ล่าง
+                <h3>48-20-10 = บน 20 ล่าง 10</h3>
+                <h3>48-20 = บน 20 ล่าง 20</h3>
 
             </div>
 
