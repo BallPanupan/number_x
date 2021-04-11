@@ -1,6 +1,6 @@
 <?php include("sql_connection.php"); ?>
 <?php
-    $sql_list_all = "SELECT * FROM `number` order by ID DESC limit 0,23";
+    $sql_list_all = "SELECT * FROM `number_1` order by ID DESC limit 0,23";
     $result_list_all = $conn->query($sql_list_all);
 ?>
 

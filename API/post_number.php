@@ -17,7 +17,7 @@
 
     $arr_data = [$number, $price, $type];
 
-    $sql_add_number = "INSERT INTO number (number, price, type)
+    $sql_add_number = "INSERT INTO number_1 (number, price, type)
     VALUES ('$number', '$price', '$type')";
 
     $insert_add_number = $conn->query($sql_add_number);
